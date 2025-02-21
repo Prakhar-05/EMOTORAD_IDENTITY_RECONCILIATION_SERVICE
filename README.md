@@ -41,7 +41,7 @@ pip install mysqlclient
    
     python manage.py startapp contacts
    
-7) Register the App with Django: In settings.py inside zamazon_project, add the following to the INSTALLED_APPS list:
+6) Register the App with Django: In settings.py inside zamazon_project, add the following to the INSTALLED_APPS list:
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'contacts',      # created app
+    'contacts',
 ]
 
 7) Configure the Database (MySQL): In the same settings.py file, update the DATABASES section:
