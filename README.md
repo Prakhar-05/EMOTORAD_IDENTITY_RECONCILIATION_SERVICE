@@ -29,12 +29,14 @@ Steps to Set Up the Project:
 3) Django and MySQL Client Library: The user must open a command prompt and run the two commands one by one:
 
 pip install django
-pip install mysqlclient   # If mysqlclient fails, the user may try using mysql-connector-python instead
+pip install mysqlclient   
+#If mysqlclient fails, the user may try using mysql-connector-python instead
 
 4) Create and Configure the Django Project: In the command prompt, run: django-admin startproject zamazon_project
-   #This creates a folder named zamazon_project.
+           #This creates a folder named zamazon_project.
 
 5) Create the Contacts App: Change into the project folder and create the app by writing the two command lines one by one
+   
     cd zamazon_project
     python manage.py startapp contacts
    
@@ -47,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'contacts',  # created app
+    'contacts',      # created app
 ]
 
 7) Configure the Database (MySQL): In the same settings.py file, update the DATABASES section:
@@ -65,8 +67,8 @@ DATABASES = {
 
 8) Define the Contact Model: Create the Contact model in models.py inside contacts as follows:
 
-from django.db import models
 
+from django.db import models
 class Contact(models.Model):
 
     # Choices for link precedence: primary if first contact, secondary if linked later.
@@ -98,7 +100,7 @@ from .models import Contact
 
 @csrf_exempt  # Disables CSRF protection for testing purposes (should be enabled in production)
 
-def identify(request):
+ def identify(request):
 
     # Only allow POST requests.
     if request.method != 'POST':
