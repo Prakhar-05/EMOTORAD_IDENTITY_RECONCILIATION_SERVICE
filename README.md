@@ -32,7 +32,7 @@ pip install django
 pip install mysqlclient   # If mysqlclient fails, the user may try using mysql-connector-python instead
 
 4) Create and Configure the Django Project: In the command prompt, run: django-admin startproject zamazon_project
-   # This creates a folder named zamazon_project.
+   #This creates a folder named zamazon_project.
 
 5) Create the Contacts App: Change into the project folder and create the app by writing the two command lines one by one
     cd zamazon_project
@@ -66,7 +66,9 @@ DATABASES = {
 8) Define the Contact Model: Create the Contact model in models.py inside contacts as follows:
 
 from django.db import models
+
 class Contact(models.Model):
+
     # Choices for link precedence: primary if first contact, secondary if linked later.
     LINK_PRECEDENCE_CHOICES = (
         ('primary', 'Primary'),
@@ -88,13 +90,16 @@ class Contact(models.Model):
 9) Implement the /identify Endpoint: Create the view in views.py inside contacts to process POST requests at /identify/:
 
 import json
+
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Q
 from .models import Contact
 
 @csrf_exempt  # Disables CSRF protection for testing purposes (should be enabled in production)
+
 def identify(request):
+
     # Only allow POST requests.
     if request.method != 'POST':
         return JsonResponse({'error': 'Only POST method allowed.'}, status=405)   
