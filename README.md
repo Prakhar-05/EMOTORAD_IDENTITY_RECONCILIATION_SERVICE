@@ -58,9 +58,9 @@ INSTALLED_APPS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zamazon_db',           # The created database in MYSQL
-        'USER': 'root',      # Replace with user's MySQL username (e.g., root)
-        'PASSWORD': '#Anonymous05',  # Replace with user's MySQL password (eg., #Anonymous05)
+        'NAME': 'zamazon_db',          
+        'USER': 'root',     
+        'PASSWORD': '#Anonymous05',  
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -180,13 +180,15 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('contacts.urls')),  # Routes all endpoints in the contacts app
+    path('', include('contacts.urls')), 
 ]
 
 12) Register the Contact Model in the Admin Panel: In admin.py inside contacts, register the model to enable data management through Django Admin:
 
 from django.contrib import admin
+
 from .models import Contact
+
 admin.site.register(Contact)
 
 13) Migrate the Database and Create a Superuser:
@@ -194,6 +196,7 @@ admin.site.register(Contact)
 13.1.) In the command prompt (in the same directory as manage.py), run:
 
 python manage.py makemigrations
+
 python manage.py migrate
 
 13.2) Create an Admin User, Run: python manage.py createsuperuser 
