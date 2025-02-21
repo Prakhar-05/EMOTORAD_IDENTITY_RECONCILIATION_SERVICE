@@ -176,12 +176,10 @@ urlpatterns = [
 11) In the Main Project, edit urls.py inside amazon_project to include the contacts app’s URLs:
 
 from django.contrib import admin
+
 from django.urls import path, include
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('contacts.urls')), 
-]
+urlpatterns = [ path('admin/', admin.site.urls), path('', include('contacts.urls')),]
 
 12) Register the Contact Model in the Admin Panel: In admin.py inside contacts, register the model to enable data management through Django Admin:
 
