@@ -38,9 +38,10 @@ pip install mysqlclient
 5) Create the Contacts App: Change into the project folder and create the app by writing the two command lines one by one
    
     cd zamazon_project
+   
     python manage.py startapp contacts
    
-6) Register the App with Django: In settings.py inside zamazon_project, add the following to the INSTALLED_APPS list:
+7) Register the App with Django: In settings.py inside zamazon_project, add the following to the INSTALLED_APPS list:
 
 INSTALLED_APPS = [
     'django.contrib.admin',
