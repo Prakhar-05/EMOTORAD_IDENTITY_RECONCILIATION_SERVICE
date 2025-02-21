@@ -29,7 +29,9 @@ Steps to Set Up the Project:
 3) Django and MySQL Client Library: The user must open a command prompt and run the two commands one by one:
 
 pip install django
+
 pip install mysqlclient   
+
 #If mysqlclient fails, the user may try using mysql-connector-python instead
 
 4) Create and Configure the Django Project: In the command prompt, run: django-admin startproject zamazon_project
