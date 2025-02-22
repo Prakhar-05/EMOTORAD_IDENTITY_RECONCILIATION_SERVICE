@@ -207,7 +207,7 @@ python manage.py migrate
     
 15) Testing the /identify Endpoint, Using cURL: Open a new command prompt (while the server is running) and execute:
     
-    curl -X POST -H "Content-Type: application/json" -d "{\"email\":\"ps@mail.com\", \"phoneNumber\":\"1234567890\"}" http://127.0.0.1:8000/identify/
+   curl -X POST -H "Content-Type: application/json" -d "{\"email\":\"ps@mail.com\",\"phoneNumber\":\"1234567890\"}" http://127.0.0.1:8000/identify/
     
    '''  The expected JSON response should be:
 
