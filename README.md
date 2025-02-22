@@ -187,9 +187,9 @@ urlpatterns = [ path('admin/', admin.site.urls), path('', include('contacts.urls
 
 from django.contrib import admin
 
-from .models import contact
+from .models import Contact
 
-admin.site.register(contacts)
+admin.site.register(Contact)
 
 13) Migrate the Database and Create a Superuser:
    
